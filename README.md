@@ -11,5 +11,5 @@ test
 
 pub-adjus
 
-test 1 sep
+test 30 sep
 
