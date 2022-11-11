@@ -14,7 +14,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
- 
+    - name: chckout code
+      uses: actions/checkout@v3
+      
       # Runs a single command using the runners shell
     - name: Super-Linter
       uses: github/super-linter@v4.9.7
