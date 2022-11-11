@@ -1,17 +1,26 @@
 <?php
 
 
-Class MyClass
+class MyClass
 {
 
-    private $spaak = nunll;
+    private $spaak = null;
+
     /**
      * MyClass constructor.
      */
-    public function __construct()
+    public function __construct($spaak = null)
     {
 
+        if (!empty($spaak)) {
+            $this->spaak = $spaak;
+        }
 
+    }
+
+    function getSpaak()
+    {
+        return $this->spaak;
     }
 
 }

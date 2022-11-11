@@ -1,5 +1,6 @@
 <?php
 
+$arr = array();
 
 $arr[] = 1;
 $arr[] = 1;
