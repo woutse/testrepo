@@ -28,4 +28,10 @@ class MyClass
         return $this->spaak;
     }
 
+    function getSpaak2()
+    {
+
+        return $this->spaak;
+    }
+
 }
