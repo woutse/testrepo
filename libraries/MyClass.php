@@ -19,9 +19,7 @@ class MyClass
 
     }
 
-    /**
-     * @return mixed|string|null
-     */
+
     function getSpaak()
     {
 

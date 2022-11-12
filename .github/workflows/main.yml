@@ -1,4 +1,5 @@
-name: PHPStan
+# https://github.com/php-actions/phpstan
+name: PHPStan - PHP Static Analysis
 
 on:
   # Run on all pushes and on all pull requests.
@@ -15,14 +16,13 @@ on:
 jobs:
   phpstan:
     name: "PHP: 7.4 | PHPStan"
-
     runs-on: "ubuntu-latest"
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install PHP
+      - name: PHPSTAN
         uses: php-actions/phpstan@v3
         with:
           path: ./
