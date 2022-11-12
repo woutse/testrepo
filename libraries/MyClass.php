@@ -14,7 +14,7 @@ class MyClass
     {
 
         if (!empty($spaak)) {
-            $this->spaak = $spaak;
+            $this->spaak = $spaak . $getal;
         }
 
     }
@@ -28,6 +28,9 @@ class MyClass
         return $this->spaak;
     }
 
+    /**
+     * @return string
+     */
     function getSpaak2()
     {
 
