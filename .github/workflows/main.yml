@@ -17,5 +17,5 @@ jobs:
       - name: PHPSTAN
         uses: php-actions/phpstan@v3
         with:
-          path: ./
+          path: ./libraries
           level: 7
