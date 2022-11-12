@@ -33,4 +33,4 @@ jobs:
       # Dependencies need to be installed to make sure the PHPUnit classes are recognized.
       # @link https://github.com/marketplace/actions/install-composer-dependencies
       - name: Run PHPStan
-        run: phpstan analyse --configuration=phpstan.neon
+        run: phpstan analyse
