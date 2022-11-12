@@ -22,3 +22,8 @@ foreach($arr as $k => $v)
 
 
 
+
+foreach($arr as $k => $v)
+{
+    echo $v;
+}
