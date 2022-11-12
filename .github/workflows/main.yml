@@ -1,0 +1,15 @@
+name: Lint PHP files
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+  php-73:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: StephaneBour/actions-php-lint@7.3
+        with:
+          dir: './'
