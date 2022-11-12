@@ -1,28 +1,20 @@
-name: PHPStan
+# https://github.com/php-actions/phpstan
+name: PHPStan - PHP Static Analysis
 
-on:
-  # Run on all pushes and on all pull requests.
-  # Prevent the build from running when there are only irrelevant changes.
-  push:
-    paths-ignore:
-      - '**.md'
-  pull_request:
-    paths-ignore:
-      - '**.md'
-  # Allow manually triggering the workflow.
-  workflow_dispatch:
+on: [pull_request]
+# Allow manually triggering the workflow.
+#  workflow_dispatch:
 
 jobs:
   phpstan:
     name: "PHP: 7.4 | PHPStan"
-
     runs-on: "ubuntu-latest"
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install PHP
+      - name: PHPSTAN
         uses: php-actions/phpstan@v3
         with:
           path: ./
