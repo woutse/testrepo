@@ -34,3 +34,5 @@ jobs:
       # @link https://github.com/marketplace/actions/install-composer-dependencies
       - name: Run PHPStan
         run: phpstan analyse
+        with:
+          path: ./
