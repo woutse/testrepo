@@ -8,8 +8,9 @@ class MyClass
 
     /**
      * MyClass constructor.
+     * @param string|null $spaak
      */
-    public function __construct($spaak = null)
+    public function __construct(string $spaak = null)
     {
 
         if (!empty($spaak)) {

@@ -12,7 +12,7 @@ foreach($arr as $k => $v)
     echo $v;
 }foreach($arr as $k => $v)
 {
-    echo $e;
+
 }
 foreach($arr as $k => $v)
 {
