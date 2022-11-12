@@ -1,24 +1,48 @@
-name: Lint PHP files
-on: [pull_request]
+---
+#################################
+#################################
+## Super Linter GitHub Actions ##
+#################################
+#################################
+name: Lint Code Base
 
+#############################
+# Start the job on all push #
+#############################
+on:
+  pull_request:
+    branches: [master, main]
+
+###############
+# Set the Job #
+###############
 jobs:
-  php-73:
+  build:
+    # Name the Job
+    name: Lint Code Base
+    # Set the agent to run on
     runs-on: ubuntu-latest
-    steps:
-      - uses: StephaneBour/actions-php-lint@7.3
-        with:
-          dir: './'
 
-  php-74:
-    runs-on: ubuntu-latest
+    ##################
+    # Load all steps #
+    ##################
     steps:
-      - uses: StephaneBour/actions-php-lint@7.4
+      ##########################
+      # Checkout the code base #
+      ##########################
+      - name: Checkout Code
+        uses: actions/checkout@v3
         with:
-          dir: './'
+          # Full git history is needed to get a proper
+          # list of changed files within `super-linter`
+          fetch-depth: 0
 
-  php-81:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: StephaneBour/actions-php-lint@8.1
-        with:
-          dir: './'
+      ################################
+      # Run Linter against code base #
+      ################################
+      - name: Lint Code Base
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
