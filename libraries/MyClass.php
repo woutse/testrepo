@@ -4,7 +4,7 @@
 class MyClass
 {
 
-    private $spaak = null;
+    private string $spaak = 'yj';
 
     /**
      * MyClass constructor.
@@ -18,6 +18,9 @@ class MyClass
 
     }
 
+    /**
+     * @return mixed|string|null
+     */
     function getSpaak()
     {
 
