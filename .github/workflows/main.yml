@@ -19,3 +19,12 @@ jobs:
         with:
           path: ./libraries
           level: 7
+
+  linting:
+    name: linting code autofr format heck
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: StephaneBour/actions-php-lint@7.4
+        with:
+          dir: './libraries'
