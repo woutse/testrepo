@@ -27,4 +27,4 @@ jobs:
     steps:
       - uses: StephaneBour/actions-php-lint@7.4
         with:
-          dir: './libraries'
+          dir: ./libraries
