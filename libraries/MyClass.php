@@ -30,9 +30,7 @@ class MyClass
         return $this->spaak;
     }
 
-    /**
-     * @return string
-     */
+
     function getSpaak2()
     {
 
