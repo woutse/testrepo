@@ -1,15 +1,39 @@
-name: Lint PHP files
-on: [push, pull_request]
+name: PHPStan
+
+on:
+  # Run on all pushes and on all pull requests.
+  # Prevent the build from running when there are only irrelevant changes.
+  push:
+    paths-ignore:
+      - '**.md'
+  pull_request:
+    paths-ignore:
+      - '**.md'
+  # Allow manually triggering the workflow.
+  workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+  phpstan:
+    name: "PHP: 7.4 | PHPStan"
 
-  php-73:
-    runs-on: ubuntu-latest
+    runs-on: "ubuntu-latest"
+
     steps:
-      - uses: StephaneBour/actions-php-lint@7.3
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
         with:
-          dir: './'
+          php-version: '7.4'
+          coverage: none
+          tools: phpstan
+
+      # Install dependencies and handle caching in one go.
+      # Dependencies need to be installed to make sure the PHPUnit classes are recognized.
+      # @link https://github.com/marketplace/actions/install-composer-dependencies
+      - name: Install Composer dependencies
+        uses: "ramsey/composer-install@v2"
+
+      - name: Run PHPStan
+        run: phpstan analyse --configuration=phpstan.neon
