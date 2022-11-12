@@ -19,10 +19,10 @@ jobs:
       
       # Runs a single command using the runners shell
     - name: Super-Linter
-      uses: github/super-linter@v4.9.7
-      
+      uses: github/super-linter@v4.9.7   
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+        VALIDATE_ALL_CODEBASE: false
       
 
     
