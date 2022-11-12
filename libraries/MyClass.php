@@ -20,6 +20,7 @@ class MyClass
 
     function getSpaak()
     {
+
         return $this->spaak;
     }
 
