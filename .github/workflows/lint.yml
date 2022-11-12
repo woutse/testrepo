@@ -1,0 +1,24 @@
+name: Lint PHP files
+on: [pull_request]
+
+jobs:
+  php-73:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: StephaneBour/actions-php-lint@7.3
+        with:
+          dir: './'
+
+  php-74:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: StephaneBour/actions-php-lint@7.4
+        with:
+          dir: './'
+
+  php-81:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: StephaneBour/actions-php-lint@8.1
+        with:
+          dir: './'
