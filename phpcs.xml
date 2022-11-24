@@ -56,7 +56,6 @@
         <severity>0</severity>
     </rule>
 
-
     <!-- Code MUST use an indent of 4 spaces, and MUST NOT use tabs for indenting. -->
     <rule ref="Generic.WhiteSpace.ScopeIndent">
         <properties>
@@ -67,7 +66,5 @@
         </properties>
     </rule>
     <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
-
-
 
 </ruleset>
