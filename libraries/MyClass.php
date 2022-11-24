@@ -56,4 +56,9 @@ class MyClass
         return $this->_spaak;
     }
 
+    public function checkitout()
+    {
+        return false;
+    }
+
 }
