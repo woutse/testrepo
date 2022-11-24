@@ -1,13 +1,19 @@
-name: phpcs
+name: PHPCS check
+
 on: pull_request
 
 jobs:
-  build:
+  phpcs:
+    name: PHPCS
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - name: PHP Code Style (phpcs)
-        uses: chindit/actions-phpcs@master
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
-          dir: ./libraries
+          php-version: 8.1
+          tools: composer:v2
+      - name: Install Dependencies
+        run: composer install
+      - name: PHPCS check
+        uses: navarr/phpcs-action@v3
