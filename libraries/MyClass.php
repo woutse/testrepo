@@ -1,22 +1,34 @@
 <?php
+/**
+ * File comments
+ *
+ * @category yadieyadyadya
+ */
 
-
+/**
+ * Class comment
+ *
+ *  @category taf
+ */
 class MyClass
 {
 
-    private string $spaak = 'yj';
-
+    /**
+     * @var string
+     */
+    private string $_spaak = 'yj';
 
     /**
      * MyClass constructor.
-     * @param string|null $spaak
-     * @param int $getal
+     *
+     * @param string|null $spaak tektew
+     * @param int $getal tewtwe
      */
     public function __construct(string $spaak = null, int $getal = 2)
     {
 
         if (!empty($spaak)) {
-            $this->spaak = $spaak . $getal;
+            $this->_spaak = $spaak . $getal;
         }
 
 
@@ -30,14 +42,16 @@ class MyClass
     function getSpaak()
     {
 
-        return $this->spaak;
+        return $this->_spaak;
     }
 
-
+    /**
+     * @return string
+     */
     function getSpaak2()
     {
 
-        return $this->spaak;
+        return $this->_spaak;
     }
 
 }
