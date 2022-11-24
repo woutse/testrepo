@@ -19,6 +19,9 @@ class MyClass
             $this->spaak = $spaak . $getal;
         }
 
+
+        $raap = 1;
+
     }
 
     /**
