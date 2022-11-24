@@ -46,4 +46,3 @@ jobs:
           VALIDATE_PHP: true
           VALIDATE_PHP_PHPCS: true
           VALIDATE_ALL_CODEBASE: false
-          YAML_CONFIG_FILE: .yamllint
