@@ -38,7 +38,10 @@ class MyClass
 
     }
 
+
+
     /**
+     *
      * @return string
      */
     function getSpaak()
@@ -47,12 +50,18 @@ class MyClass
         return $this->_spaak;
     }
 
+
+
+
+
+
     /**
      * @return string
      */
     function getSpaak2()
     {
 
+        //
         return $this->_spaak;
     }
 
@@ -60,5 +69,11 @@ class MyClass
     {
         return false;
     }
+
+
+        public function checkitout2()
+        {
+            return false;
+        }
 
 }
