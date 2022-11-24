@@ -1,4 +1,4 @@
-name: PHPCS check
+name: PHPCS check2
 
 on: pull_request
 
@@ -17,3 +17,5 @@ jobs:
         run: composer install
       - name: PHPCS check
         uses: navarr/phpcs-action@v3
+        with:
+          enable_warnings: true
