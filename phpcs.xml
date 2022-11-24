@@ -29,7 +29,7 @@
     </rule>
     <rule ref="PSR1.Classes.ClassDeclaration">
         <severity>10</severity>
-        <type>error</type>
+        <type>warning</type>
     </rule>
     <rule ref="PSR2.Files.ClosingTag">
         <severity>10</severity>
