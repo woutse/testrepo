@@ -28,6 +28,6 @@ jobs:
       - uses: Novusvetus/action-php_codesniffer@1.2.10
         with:
           files: "**.php"
-          scan_all: true
+          scan_all: false
           phpcs_path: php phpcs.phar
           standard: phpcs.xml
