@@ -2,13 +2,13 @@
 /**
  * File comments
  *
- * @category yadieyadyadya
+ * @category Yadieyadyadya
  */
 
 /**
  * Class comment
  *
- *  @category taf
+ * @category Taf
  */
 class MyClass
 {
