@@ -38,7 +38,10 @@ class MyClass
 
     }
 
+
+
     /**
+     *
      * @return string
      */
     function getSpaak()
