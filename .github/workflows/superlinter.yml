@@ -46,3 +46,6 @@ jobs:
           SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
            VALIDATE_PHP_PSALM: false
 
+
+          VALIDATE_PHP: true
+          VALIDATE_PHP_PHPCS: true
