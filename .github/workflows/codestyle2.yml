@@ -1,15 +1,19 @@
-name: "CI phpcs"
+name: PHPCS check
 
-on:
-  pull_request:
-    paths:
-      - "**.php"
-      - "phpcs.xml"
-      - ".github/workflows/phpcs.yml"
+on: pull_request
 
 jobs:
-  phpcs PSR2:
-    stage: linting
-    image: registry.gitlab.com/pipeline-components/php-codesniffer:latest
-    script:
-      - phpcs -s -p --colors --extensions=php --standard=PSR2 .
+  phpcs:
+    name: PHPCS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.1
+          tools: composer:v2
+      - name: Install Dependencies
+        run: composer install
+      - name: PHPCS check
+        uses: navarr/phpcs-action@v3
