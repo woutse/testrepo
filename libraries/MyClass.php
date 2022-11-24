@@ -47,12 +47,15 @@ class MyClass
         return $this->_spaak;
     }
 
+
+
     /**
      * @return string
      */
     function getSpaak2()
     {
 
+        //
         return $this->_spaak;
     }
 
