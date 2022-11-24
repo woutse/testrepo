@@ -61,4 +61,10 @@ class MyClass
         return false;
     }
 
+
+        public function checkitout2()
+        {
+            return false;
+        }
+
 }
