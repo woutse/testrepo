@@ -18,7 +18,7 @@ class MyClass
     /**
      * @var string
      */
-    private string $_spaak = 'yj';
+    protected string $_spaak = 'yj';
 
     /**
      * MyClass constructor.
