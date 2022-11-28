@@ -15,7 +15,6 @@ namespace libraries;
  */
 class MyClass
 {
-
     /**
      * @var string
      */
@@ -30,10 +29,8 @@ class MyClass
      */
     public function __construct(string $spaak = null, int $getal = 2)
     {
-
         if (!empty($spaak)) {
             $this->_spaak = $spaak . $getal;
         }
     }
-
 }
