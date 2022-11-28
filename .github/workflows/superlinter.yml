@@ -9,7 +9,7 @@ name: superlinter
 #############################
 # Start the job on all push #
 #############################
-on: pull_request
+on: [pull_request, workflow_dispatch]
 
 ###############
 # Set the Job #
