@@ -1,4 +1,5 @@
 <?php
+
 namespace libraries;
 
 /**
@@ -20,11 +21,12 @@ class MyClass
      */
     protected string $_spaak = 'yj';
 
+
     /**
-     * MyClass constructor.
+     * MyClass constructor
      *
-     * @param string|null $spaak tektew
-     * @param int $getal tewtwe
+     * @param string|null $spaak
+     * @param int $getal
      */
     public function __construct(string $spaak = null, int $getal = 2)
     {
@@ -32,48 +34,6 @@ class MyClass
         if (!empty($spaak)) {
             $this->_spaak = $spaak . $getal;
         }
-
-
-        $raap = 1;
-
     }
-
-
-
-    /**
-     *
-     * @return string
-     */
-    function getSpaak()
-    {
-
-        return $this->_spaak;
-    }
-
-
-
-
-
-
-    /**
-     * @return string
-     */
-    function getSpaak2()
-    {
-
-        //
-        return $this->_spaak;
-    }
-
-    public function checkitout()
-    {
-        return false;
-    }
-
-
-        public function checkitout2()
-        {
-            return false;
-        }
 
 }
